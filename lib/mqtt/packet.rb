@@ -483,7 +483,7 @@ module MQTT
         if @version == '3.1.0'
           if @client_id.nil? or @client_id.bytesize < 1
             raise "Client identifier too short while serialising packet"
-          elsif @client_id.bytesize > 23
+          elsif @client_id.bytesize > 26
             raise "Client identifier too long when serialising packet"
           end
         end
